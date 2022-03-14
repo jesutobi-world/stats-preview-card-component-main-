@@ -9,139 +9,374 @@
     font-family: Inter;
 }
 body{
-    background-color:  hsl(233, 47%, 7%);
+    background-color: hsl(233, 47%, 7%);
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
 }
-.card{
-    background-color: hsl(244, 38%, 16%);
-    width: 80%;
-    height: 60%;
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 1.5vh;
-}
-.card .card-text{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 7vh;
-    padding-right: 5vh;
-}
-.card-text h1{
-    color: hsl(0, 0%, 100%);
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 5vh;
-}
-.card-text h1 span{
-    color: hsl(277, 64%, 61%);
-}
-.card-text p{
-    color: hsla(0, 0%, 100%, 0.75);
-    font-size: 2.5vh;
-}
-.card-text .card-list{
-    display: flex;
-    justify-content: space-between;
-}
-.card-list .list-items h2{
-    font-size: 3.0vh;
-    color: hsla(0, 0%, 100%);
-}
-.card-list .list-items p{
-    color:  hsla(0, 0%, 100%, 0.6);
-    font-size: 2.0vh;
-}
-.card .card-image{
-    width: 50%;
-}
-.card .card-image .img{
-    background-image: url(./image-header-desktop.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 1.2vh 1.2vh 0;
-    position: relative;
-}
-.img .layer {
-    background-color: rgba(104, 23, 151, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 1.2vh 1.2vh 0;
-}
-.attribution { 
-    font-size: 2.7vh; 
-    text-align: center; 
-    color: hsla(0, 0%, 100%, 0.6); 
-    margin-top: 2.5vh;
-}
-.attribution a { color: hsl(277, 64%, 61%); }
-
-@media (min-width: 670px ) and (max-width: 1000px){
-    .card{
-        width: 93%;
-        height: 62%;
-    }
-}
-@media (max-width: 669px){
-    .card{
-        width: 70vw;
-        height: 80vh;
-        flex-direction: column-reverse;
+/* Laptops and above */
+@media (min-width: 769px){
+    body{
+        display: flex;
         align-items: center;
+        justify-content: center;
     }
-    .card .card-image{
-        border-radius: 1vh 1vh 0 0;
-        height: 35%;
-        width: 100%;
+    .card{
+        display: flex;
+        flex-direction: row;
+        background-color: hsl(244, 38%, 16%);
+        width: 85%;
+        height: 60%;
+        border-radius: 1.2vw;
     }
-    .card .card-image .img{
-        background-image: url(./image-header-mobile.jpg);
+    .card-image{
+        height: 100%;
+        width: 50%;
+        border-radius: 0 1.2vw 1.2vw 0;
+    }
+    .card-image .img{
+        background-size: 100% 100%;
         background-repeat: no-repeat;
-    }
-    .img .layer,
-    .card .card-image .img{
-        border-radius: 1.5vh 1.5vh 0 0;
-    }
-    .card .card-text{
+        background-image: url(./image-header-desktop.jpg);
+        height: 100%;
         width: 100%;
-        height: 65%;
+        border-radius:  0 1.2vw 1.2vw 0;
+        position: relative;
+    }
+    .card-image .img .layer{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(103, 29, 150, 0.7);
+        border-radius: 0 1.2vw 1.2vw 0;
+    }
+    .card-text{
+        height: 100%;
+        width: 50%;
+        display: flex;
         flex-direction: column;
-        margin: 0;
-        padding-bottom: 3.5vh;
-        margin: 3vh;
-        align-items: center;
-        padding-right: 0;
+        margin: 5.5vh 6.5vh 4.5vh 5.5vh;
+        gap: 5.5vh;
     }
     .card-text h1{
-        font-size: 3.5vw;
-        text-align: center;
+        font-size: 2.5vw;
+        color:  hsl(0, 0%, 100%);
+    }
+    .card-text h1 span{
+        color: hsl(277, 64%, 61%);
     }
     .card-text p{
-        font-size: 2.5vw;
-        text-align: center;
-        margin: 0 2vh;
+        font-size: 1.5vw;
+        color: hsla(0, 0%, 100%, 0.75);
+        line-height: 4.5vh;
     }
     .card-list{
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 2.5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5.5vh;
     }
-    .card-list .list-items{
+    .card-list h2{
+        font-size: 2vw;
+        color: white;
+        margin-bottom: 3vh;
+    }
+    .card-list p{
+        font-size: 1vw;
+    }
+}
+/* Tablets */
+@media (min-width:426px ) and (max-width:768px ){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: hsl(244, 38%, 16%);
+        width: 60%;
+        height: 80%;
+        border-radius: 1.2vw;
+    }
+    .card-image{
+        height: 35%;
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-image .img{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(./image-header-mobile.jpg);
+        height: 100%;
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+        position: relative;
+    }
+    .card-image .img .layer{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(103, 29, 150, 0.7);
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-text{
+        height: 65%;
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin-top: 3vh;
+        margin-left: 2.3vh;
+        margin-right: 2.3vh;
+        margin-bottom: 2.5vh;
+        gap: 1vh;
+        justify-content: space-between;
     }
-    .card-list .list-items p{
-        font-size: 2.2vw;
+    .card-text h1{
+        font-size: 3.7vw;
+        color:  hsl(0, 0%, 100%);
     }
+    .card-text h1 span{
+        color: hsl(277, 64%, 61%);
+    }
+    .card-text p{
+        font-size: 2.6vw;
+        color: hsla(0, 0%, 100%, 0.75);
+        line-height: 3.5vh;
+    }
+    .card-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1vh;
+        margin: 1vh 0;
+    }
+    .card-list h2{
+        font-size: 3vw;
+        color: white;
+        margin-bottom: 1.5vh;
+    }
+    .card-list p{
+        font-size: 2vw;
+    }
+}
+/* Large Mobile Phones */
+@media (min-width: 376px) and (max-width: 425px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: hsl(244, 38%, 16%);
+        width: 80%;
+        height: 92%;
+        border-radius: 1.2vw;
+    }
+    .card-image{
+        height: 35%;
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-image .img{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(./image-header-mobile.jpg);
+        height: 100%;
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+        position: relative;
+    }
+    .card-image .img .layer{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(103, 29, 150, 0.7);
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-text{
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1.4vh;
+        margin-left: 1.3vh;
+        margin-right: 1.3vh;
+        margin-bottom: .7vh;
+        gap: 4.5vh;
+    }
+    .card-text h1{
+        font-size: 5vw;
+        color:  hsl(0, 0%, 100%);
+    }
+    .card-text h1 span{
+        color: hsl(277, 64%, 61%);
+    }
+    .card-text p{
+        font-size: 3.5vw;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+    .card-list{
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .card-list h2{
+        font-size: 4.5vw;
+        color: white;
+        margin-bottom: 1vh;
+    }
+    .card-list p{
+        font-size: 2.5vw;
+    }
+}
+/* Medium Mobile Phones */
+@media (min-width: 321px) and (max-width: 375px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: hsl(244, 38%, 16%);
+        width: 80%;
+        height: 90%;
+        border-radius: 1.2vw;
+    }
+    .card-image{
+        height: calc(100%/3);
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-image .img{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(./image-header-mobile.jpg);
+        height: 100%;
+        width: 100%;
+        border-radius: 1.2vw 1.2vw 0 0;
+        position: relative;
+    }
+    .card-image .img .layer{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(103, 29, 150, 0.7);
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+    .card-text{
+        height: calc(200%/3);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2.5vh;
+        margin-left: 2.5vh;
+        margin-right: 2.5vh;
+        margin-bottom: 2.2vh;
+        gap: 2vh;
+        justify-content: space-between;
+    }
+    .card-text h1{
+        font-size: 5vw;
+        color:  hsl(0, 0%, 100%);
+    }
+    .card-text h1 span{
+        color: hsl(277, 64%, 61%);
+    }
+    .card-text p{
+        font-size: 3.7vw;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+    .card-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2vh;
+        margin: 1.5vh 0;
+    }
+    .card-list h2{
+        font-size: 5vw;
+        color: white;
+        margin-bottom: 2vh;
+    }
+    .card-list p{
+        font-size: 3vw;
+    }
+}
+/* Small Mobile Phones */
+@media (max-width: 320px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: hsl(244, 38%, 16%);
+        width: 90%;
+        height: 90%;
+        border-radius: 1.3vw;
+    }
+    .card-image{
+        height: calc(100%/3);
+        width: 100%;
+        border-radius: 1.3vw 1.3vw 0 0;
+    }
+    .card-image .img{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(./image-header-mobile.jpg);
+        height: 100%;
+        width: 100%;
+        border-radius: 1.3vw 1.3vw 0 0;
+        position: relative;
+    }
+    .card-image .img .layer{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(103, 29, 150, 0.7);
+        border-radius: 1.3vw 1.3vw 0 0;
+    }
+    .card-text{
+        height: calc(200%/3);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2.5vh;
+        margin-left: 1.5vh;
+        margin-right: 1.5vh;
+        margin-bottom: 1.5vh;
+        gap: 3vh;
+    }
+    .card-text h1{
+        font-size: 6.5vw;
+        color:  hsl(0, 0%, 100%);
+    }
+    .card-text h1 span{
+        color: hsl(277, 64%, 61%);
+    }
+    .card-text p{
+        font-size: 5vw;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+    .card-list{
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        margin: 5px 0;
+    }
+    .card-list h2{
+        font-size: 5vw;
+        color: white;
+        margin-bottom: 2vh;
+    }
+    .card-list p{
+        font-size: 3.2vw;
+    }
+
 }
