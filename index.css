@@ -92,7 +92,7 @@ body{
         height: 62%;
     }
 }
-@media (min-width: 375px) and (max-width: 669px){
+@media (max-width: 669px){
     .card{
         width: 70vw;
         height: 80vh;
